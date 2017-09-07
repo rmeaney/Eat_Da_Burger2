@@ -1,0 +1,59 @@
+<!--<p>{{name}}</p>
+<p>{{price}}</p>
+<p>{{awesomeness}}</p>-->
+
+<div class="container">
+    <div class="row">
+        <div id="ready" class="col s6">
+            <h5>Burgers Available!</h5>
+            <hr>
+            <ul>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        <li>
+                            <div class="row">
+                                <div class="col s6">
+                                    {{burger_name}}
+                                </div>
+                                <div class="col s6">
+                                    <form action="/{{this.id}}?_method=PUT" method="post">
+                                        <input type="hidden" name="devoured" value="true">
+                                        <button class=" btn waves-effect waves-orange" type="submit">Devour It!!!</button>
+                                    </form> 
+                                </div>    
+                            </div>    
+                        </li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div><!-- END READY -->
+        <div id="devoured" class="col s6">
+            <h5>Burgers devoured!!</h5>
+            <hr>
+            <ul>
+                {{#each burgers}}
+                    {{#if devoured}}
+                        <li>{{burger_name}}</li>
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div><!-- END DEVOURED -->
+    </div><!-- END ROW -->
+    <h5 class = 'center-align'>Enter a burger that you would like to eat, then click the "Submit" button.</h5>
+    <div id="addBurger" class="row">
+        <form class="col s12" action="/?method=POST" method="POST">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Enter your Burger" name="burger" id="burger" type="text">
+                </div>
+                <div class="center-align">
+                    <button class="waves-effect wave-orange btn" type="submit">Submit</button>
+                </div>
+
+            </div>
+            
+        </form>
+    </div>
+    
+
+</div><!-- END CONTAINER -->

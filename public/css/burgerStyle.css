@@ -1,0 +1,54 @@
+html{
+font-family:arial;
+background-color: #f9cc67;
+}
+h3,h5{
+	text-align:center;
+}
+.btn{
+	background-color:red;
+	border-radius:25px;
+}
+.btn:hover{
+	background-color:purple;
+}
+#devoured{
+	text-align:center;
+}
+#devoured li{
+	 list-style-type: circle;
+	 margin-left:20px;
+}
+input{
+	color:blue;
+
+}
+.inputColor{
+	color:blue;
+	background-color:white;
+	height:20px;
+	width:400px;
+}
+::-webkit-input-placeholder {
+    color: red;
+    background-color:white;
+    height:40px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: red;  
+    background-color:white;
+    height:40px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: red;  
+    background-color:white;
+    height:40px;
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+   background-color:white;
+   height:40px;
+}
